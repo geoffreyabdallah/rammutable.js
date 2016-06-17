@@ -1,0 +1,41 @@
+{
+  "name": "rammutable.js",
+  "version": "0.0.1",
+  "description": "Ramda bindings for Immutable.js",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "npm run compile && mocha --compilers js:babel-core/register",
+    "compile": "babel --presets es2015,stage-0 -d lib/ src/",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geoffreyabdallah/rammutable.js.git"
+  },
+  "keywords": [
+    "Ramda",
+    "Immutable"
+  ],
+  "author": "Geoffrey Abdallah <geoffrey@geoffreyabdallah.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geoffreyabdallah/rammutable.js/issues"
+  },
+  "homepage": "https://github.com/geoffreyabdallah/rammutable.js#readme",
+  "devDependencies": {
+    "babel": "^6.0.0",
+    "babel-core": "^6.0.0",
+    "babel-eslint": "^4.1.6",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "chai": "*",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.1.1",
+    "mocha": "*"
+  },
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "ramda": "^0.21.0"
+  }
+}

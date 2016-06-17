@@ -4,7 +4,7 @@ import {
   compose,
   invoker,
 } from 'ramda';
-import iOrR from './iOrR';
+import { iOrR } from './helpers';
 
 const mapSize = invoker(0, 'size');
 

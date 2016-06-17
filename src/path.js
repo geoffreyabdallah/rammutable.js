@@ -3,7 +3,7 @@ import {
   curry,
   invoker,
 } from 'ramda';
-import iOrR from './iOrR';
+import { iOrR } from './helpers';
 
 const getIn = invoker(1, 'getIn');
 
