@@ -5,13 +5,13 @@ import {
   identity,
   invoker,
 } from 'ramda';
-import { Iterable, fromJS as iFromJS } from 'immutable';
+import Immutable from 'immutable';
 
-const isImmutable = Iterable.isIterable;
+const isImmutable = Immutable.Iterable.isIterable;
 
 const toJS = ifElse(isImmutable, invoker(0, 'toJS'), identity);
 
-const fromJS = ifElse(isImmutable, identity, iFromJS);
+const fromJS = ifElse(isImmutable, identity, x => Immutable.fromJS(x));
 
 const iOrR = curry((iFn, rFn, target) => call(ifElse(
   isImmutable,

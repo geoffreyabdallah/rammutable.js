@@ -1,13 +1,21 @@
 import {
-  length as rLength,
+  length,
   keys,
   compose,
-  invoker,
+  cond,
+  T,
+  prop,
 } from 'ramda';
 import { iOrR } from './helpers';
 
-const mapSize = invoker(0, 'size');
+const mapSize = prop('size');
 
-const size = map => iOrR(mapSize, compose(rLength, keys), map);
+const size = map => iOrR(
+  mapSize,
+    cond([
+      [Array.isArray, length],
+      [T, compose(length, keys)],
+    ]),
+  map);
 
 export default size;

@@ -1,10 +1,10 @@
 import {
   length as rLength,
-  invoker,
+  prop,
 } from 'ramda';
 import { iOrR } from './helpers';
 
-const size = invoker(0, 'size');
+const size = prop('size');
 
 const length = list => iOrR(size, rLength, list);
 
