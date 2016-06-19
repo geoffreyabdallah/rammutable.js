@@ -10,6 +10,8 @@ import { iOrR } from './helpers';
 
 const get = invoker(1, 'get');
 
-const props = curry((keys, target) => iOrR(t => map(flip(get)(t), keys), rProps(keys), target));
+const flipGet = flip(get);
+
+const props = curry((keys, target) => iOrR(t => map(flipGet(t), keys), rProps(keys), target));
 
 export default props;
