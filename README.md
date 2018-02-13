@@ -58,6 +58,15 @@ Returns the result of an equality test at a given prop
   propEq('a', 'test', Map({ a: 'test' })) // true
   propEq('a', 'test', { a: 'test' }) // true
 ```
+### propOr
+Return the found prop value or the supplied default value
+```javascript
+  propOr('a!', 'a', Map({ a: 'test'}) // 'test'
+  propOr('a!', 'a', { a: 'test'}) // 'test'
+  propOr('a!', 'a', Map({ b: 'test'}) // 'a!'
+  propOr('a!', 'a', { b: 'test'}) // 'a!'
+
+```
 ### props
 Returns an array of values corresponding to an array of given props
 ```javascript

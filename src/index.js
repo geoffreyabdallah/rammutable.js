@@ -6,5 +6,6 @@ export path from './path';
 export pathEq from './pathEq';
 export prop from './prop';
 export propEq from './propEq';
+export propOr from './propOr';
 export size from './size';
 export props from './props';
